@@ -40,25 +40,40 @@ def make_melon_types():
     musk.add_pairing("mint")
     all_melon_types.append(musk)
     
-    casaba = MelonType("Casaba", "cas", 2003, "orange", False, False)
-    casaba.add_pairing("strawberries", "mint")
-    all_melon_types.append(casaba)
+    cas = MelonType("Casaba", "cas", 2003, "orange", False, False)
+    cas.add_pairing("strawberries")
+    cas.add_pairing("mint")
+    all_melon_types.append(cas)
 
     cren = MelonType("Crenshaw", "cren", 1996, "green", False, False)
     cren.add_pairing("proscuitto")
     all_melon_types.append(cren)
     
-    yellow_watermelon = MelonType("Yellow Watermelon", "yw", 2013, "yellow", False, True)
-    yellow_watermelon.add_pairing("ice cream")
-    all_melon_types.append(yellow_watermelon)
+    yw = MelonType("Yellow Watermelon", "yw", 2013, "yellow", False, True)
+    yw.add_pairing("ice cream")
+    all_melon_types.append(yw)
 
     return all_melon_types
 
 
 def print_pairing_info(melon_types):
     """Prints information about each melon type's pairings."""
+    for melon in melon_types:
+        print(f"{melon.name} pairs with")
+        for pairing in melon.pairings:
+            print(f"- {pairing}")
 
-    # Fill in the rest
+#     print(f"""{melon_types[0].name} pairs with
+# - {melon_types[0].pairings}
+          
+# {melon_types[1].name} pairs with
+# - {melon_types[1].pairings}
+          
+# {melon_types[2].name} pairs with
+# - {melon_types[2].pairings}
+          
+# {melon_types[3].name} pairs with
+# - {melon_types[3].pairings}""")
 
 
 def make_melon_type_lookup(melon_types):
